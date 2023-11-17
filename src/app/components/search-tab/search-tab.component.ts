@@ -15,7 +15,7 @@ export class SearchTabComponent {
   protected input: string = '';
 
   protected search() {
-    this.searchService.getAsJSON(this.input);
+    this.searchService.getProducts(this.input);
   }
 
   // protected search() { EJENPLO SUSCRITO AL METODO
