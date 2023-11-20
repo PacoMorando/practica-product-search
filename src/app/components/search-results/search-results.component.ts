@@ -30,7 +30,6 @@ export class SearchResultsComponent implements OnInit {
       if (searchResults != undefined) {
         this.stringResult = searchResults.query;
         this.searchResults = searchResults;
-        console.log(this.searchResults);
       }
     });
   }

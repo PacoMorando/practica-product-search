@@ -12,17 +12,11 @@ import { SearchService } from '../../services/search.service';
 })
 export class SearchTabComponent {
   private searchService: SearchService = inject(SearchService);
-  protected input: string = 'nintendo'; //Dejar este vacio
-
-  constructor(){
-    this.search();//borrar constructor
-  }
+  protected input: string = '';
 
   protected search() {
     this.searchService.getProducts(this.input);
   }
-
-
 
   // protected search() { EJENPLO SUSCRITO AL METODO
   //   this.searchService.getAsJSON(this.input).subscribe(searchResult => {
