@@ -1,1 +1,5 @@
-<p>product-detail works!</p>
+<h1>{{this.productId}}</h1>
+<div *ngIf="this.productDetails != undefined">
+    <img [src]="this.productDetails.pictures[0].url" alt="None">
+</div>
+<p>{{this.description}}</p>

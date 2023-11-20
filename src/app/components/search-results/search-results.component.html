@@ -1,4 +1,24 @@
-<p>{{this.stringResult}}</p>
-<div *ngFor="let title of this.titleResult">
-    <p>{{title}}</p>
+<div class="pb-4  ">
+    <div class="container mx-auto col-md-8  ">
+        <p>{{this.stringResult}}</p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item p-4" *ngFor="let result of this.searchResults?.results">
+                <div class="row">
+                    <div class="col-sm-auto ">
+                        <img [src]="result.thumbnail" alt="">
+                    </div>
+                    <div class="col-sm-4">
+                        <a routerLink="/product-detail/{{result.id}}">
+                            <!-- <h3 (click)="this.navigateToDetail(result.id)">{{result.price | currency:'MXN':'symbol':'1.2-2'}}</h3> esto es para usar el router desde el service-->
+                            <h3>{{result.price | currency:'MXN':'symbol':'1.2-2'}}</h3>
+                        </a>
+                        <a routerLink="/product-detail/{{result.id}}">{{result.title}}</a>
+                    </div>
+                    <div class="col-auto ms-sm-auto ">
+                        <p style="font-size: small;">{{result.address.state_name}}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>

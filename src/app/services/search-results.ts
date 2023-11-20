@@ -1,15 +1,16 @@
 export interface SearchResults {
-    site_id:                   string;
+    site_id: string;
     country_default_time_zone: string;
-    query:                     string;
-    paging:                    Paging;
-    results:                   Result[];
-    sort:                      Sort;
+    query: string;
+    paging: Paging;
+    results: Result[];
+    sort: Sort;
 }
 
 export interface Result {
     id: string;
     title: string;
+    address: Address;
     condition: string;
     thumbnail_id: string;
     catalog_product_id: string;
@@ -38,13 +39,20 @@ export interface Result {
 }
 
 export interface Paging {
-    total:           number;
+    total: number;
     primary_results: number;
-    offset:          number;
-    limit:           number;
+    offset: number;
+    limit: number;
 }
 
 export interface Sort {
-    id:   string;
+    id: string;
     name: string;
+}
+
+export interface Address {
+    state_id: string;
+    state_name: string;
+    city_id: string;
+    city_name: string;
 }

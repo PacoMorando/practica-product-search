@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import { SearchTabComponent } from './components/search-tab/search-tab.component';
 
@@ -8,7 +8,7 @@ import { SearchTabComponent } from './components/search-tab/search-tab.component
   selector: 'app-root',
   standalone: true,
   imports: [
-      CommonModule, RouterOutlet, 
+      CommonModule, RouterLink ,RouterOutlet, //RouterOutlet para navegar SPA
       SearchResultsComponent, SearchTabComponent,
     ],
   templateUrl: './app.component.html',
