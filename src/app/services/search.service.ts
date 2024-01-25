@@ -23,7 +23,7 @@ export class SearchService {
 
 
   public getProducts(product: string) {
-    this.httpClient.get<SearchResults | undefined>(`${this.searchBaseUrl}${product}&limit=4`).subscribe(searchResults => {
+    this.httpClient.get<SearchResults | undefined>(`${this.searchBaseUrl}${product}&limit=10`).subscribe(searchResults => {
       this.searchResults.next(searchResults);
     });
     this.router.navigate(['']);

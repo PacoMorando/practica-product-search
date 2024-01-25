@@ -10,7 +10,6 @@ export interface SearchResults {
 export interface Result {
     id: string;
     title: string;
-    address: Address;
     condition: string;
     thumbnail_id: string;
     catalog_product_id: string;
